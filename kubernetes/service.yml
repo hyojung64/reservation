@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: reservation
+  name: user01-reservation-test
   labels:
-    app: reservation
+    app: user01-reservation-test
 spec:
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    app: reservation
+    app: user01-reservation-test
