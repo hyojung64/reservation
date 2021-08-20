@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: reservation
+  name: user01-reservation-test
   labels:
-    app: reservation
+    app: user01-reservation-test
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: reservation
+      app: user01-reservation-test
   template:
     metadata:
       labels:
-        app: reservation
+        app: user01-reservation-test
     spec:
       containers:
-        - name: reservation
-          image: 496278789073.dkr.ecr.ap-northeast-2.amazonaws.com/hotelone-reservation:latest
+        - name: user01-reservation-test
+          image: 879772956301.dkr.ecr.ap-northeast-2.amazonaws.com/user01-reservation-test:fef2636ba3644247eb68ad70291afe345a18bbd9:latest
           ports:
             - containerPort: 8080
           readinessProbe:
